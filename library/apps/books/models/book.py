@@ -20,3 +20,17 @@ class Book(models.Model):
     comment = models.TextField()
     original_pledge_price = models.FloatField()
     original_weekly_rent_price = models.FloatField()
+    
+    @staticmethod
+    def _calculate_price_price(price, condition):
+        if condition == ConditionChoise.MINOR_DAMAGE:
+            return price * 0.8
+        elif condition == ConditionChoise.SIGNIFICANT_DAMAGE:
+            return price * 0.6
+        return price
+
+    def get_pledge_price(self):
+        return Book._calculate_price_price(self.original_pledge_price, self.condition)
+
+    def get_weekly_rent_price(self):
+        return Book._calculate_price_price(self.original_weekly_rent_price, self.condition)
