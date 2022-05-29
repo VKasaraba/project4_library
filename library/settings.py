@@ -26,13 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-r#8!0j397@$tja@&h22=k4hdbwb%s-_9!7qp9ix%b=0u7^$u35'
+ENV = os.environ
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = ENV.get('SECRET_KEY')
 
-ALLOWED_HOSTS = ['*']
+DEBUG = ENV.get('DEBUG')
+
+ALLOWED_HOSTS = [ENV.get('ALLOWED_HOSTS')]
 
 
 # Application definition
@@ -47,6 +47,8 @@ INSTALLED_APPS = [
 
     'library.apps.users',
     'library.apps.books',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -82,13 +84,6 @@ WSGI_APPLICATION = 'library.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 DATABASES = {
