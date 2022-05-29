@@ -32,7 +32,7 @@ SECRET_KEY = ENV.get('SECRET_KEY')
 
 DEBUG = ENV.get('DEBUG')
 
-ALLOWED_HOSTS = ENV.get('ALLOWED_HOSTS')
+ALLOWED_HOSTS = [ENV.get('ALLOWED_HOSTS')]
 
 
 # Application definition
