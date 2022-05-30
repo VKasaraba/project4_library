@@ -16,11 +16,11 @@ class Book(models.Model):
     year_published = models.DateField()
     number_of_copies = models.IntegerField()
     number_of_pages = models.IntegerField()
-    condition = models.CharField(max_length=50, choices=ConditionChoise.choices)
-    comment = models.TextField()
+    condition = models.CharField(max_length=50, choices=ConditionChoise.choices, default=ConditionChoise.NO_DAMAGE)
+    comment = models.TextField(null=True)
     original_pledge_price = models.FloatField()
     original_weekly_rent_price = models.FloatField()
-    
+
     @staticmethod
     def _calculate_price_price(price, condition):
         if condition == ConditionChoise.MINOR_DAMAGE:
