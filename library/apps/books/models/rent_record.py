@@ -1,11 +1,15 @@
 from math import ceil
 from django.db import models
 from datetime import datetime
+from django.contrib.auth import get_user_model
+
+
+User = get_user_model()
 
 
 class RentRecord(models.Model):
     book = models.ForeignKey('Book', on_delete=models.RESTRICT)
-    user = models.ForeignKey('User', on_delete=models.RESTRICT)
+    user = models.ForeignKey(User, on_delete=models.RESTRICT)
     date_created = models.DateField(auto_now_add=True)
     until_date = models.DateField()
     opened = models.BooleanField(default=False)
