@@ -18,6 +18,7 @@ class User(AbstractBaseUser):
     date_joined = models.DateTimeField(auto_now_add=True)
     phone = models.CharField(max_length=30, null=True)
     status = models.CharField(max_length=30, choices=StatusChoices.choices)
+    is_admin = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
 
