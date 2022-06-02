@@ -1,0 +1,162 @@
+[
+    {
+        "model": "books.book",
+        "pk": 1,
+        "fields": {
+            "name": "Harry Potter and the Philosopher's Stone",
+            "author": 2,
+            "genre": "Fantasy",
+            "publisher": 1,
+            "date_published": "1997-04-02",
+            "number_of_copies": 100,
+            "number_of_pages": 420,
+            "condition": "Minor damage",
+            "comment": null,
+            "original_weekly_rent_price": 40.0
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 2,
+        "fields": {
+            "name": "The Green Mile",
+            "author": 1,
+            "genre": "Horror",
+            "publisher": 2,
+            "date_published": "1999-12-29",
+            "number_of_copies": 60,
+            "number_of_pages": 123,
+            "condition": "No damage",
+            "comment": null,
+            "original_weekly_rent_price": 45.0
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 3,
+        "fields": {
+            "name": "The Running Man",
+            "author": 1,
+            "genre": "Novel",
+            "publisher": 2,
+            "date_published": "1995-11-24",
+            "number_of_copies": 142,
+            "number_of_pages": 141,
+            "condition": "Significant damage",
+            "comment": null,
+            "original_weekly_rent_price": 35.0
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 4,
+        "fields": {
+            "name": "Bad Blood",
+            "author": 3,
+            "genre": "Detective",
+            "publisher": 1,
+            "date_published": "2018-09-11",
+            "number_of_copies": 30,
+            "number_of_pages": 390,
+            "condition": "No damage",
+            "comment": null,
+            "original_weekly_rent_price": 60.0
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 5,
+        "fields": {
+            "name": "The Da Vinci Code",
+            "author": 4,
+            "genre": "Thriller",
+            "publisher": 2,
+            "date_published": "2003-06-19",
+            "number_of_copies": 90,
+            "number_of_pages": 410,
+            "condition": "Minor damage",
+            "comment": null,
+            "original_weekly_rent_price": 42.0
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 6,
+        "fields": {
+            "name": "Angels & Demons",
+            "author": 4,
+            "genre": "Thriller",
+            "publisher": 2,
+            "date_published": "2000-06-19",
+            "number_of_copies": 110,
+            "number_of_pages": 452,
+            "condition": "No damage",
+            "comment": null,
+            "original_weekly_rent_price": 51.0
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 7,
+        "fields": {
+            "name": "Inferno",
+            "author": 4,
+            "genre": "Thriller",
+            "publisher": 2,
+            "date_published": "2013-09-02",
+            "number_of_copies": 32,
+            "number_of_pages": 382,
+            "condition": "No damage",
+            "comment": null,
+            "original_weekly_rent_price": 48.0
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 8,
+        "fields": {
+            "name": "Harry Potter and the Deathly Hallows",
+            "author": 2,
+            "genre": "Fantasy",
+            "publisher": 1,
+            "date_published": "2007-07-05",
+            "number_of_copies": 15,
+            "number_of_pages": 367,
+            "condition": "Significant damage",
+            "comment": null,
+            "original_weekly_rent_price": 42.0
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 9,
+        "fields": {
+            "name": "Harry Potter and the Chamber of Secrets",
+            "author": 2,
+            "genre": "Fantasy",
+            "publisher": 1,
+            "date_published": "2002-02-13",
+            "number_of_copies": 39,
+            "number_of_pages": 246,
+            "condition": "Minor damage",
+            "comment": null,
+            "original_weekly_rent_price": 38.0
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 10,
+        "fields": {
+            "name": "A Smarter Way to Learn JavaScript",
+            "author": 5,
+            "genre": "Educational",
+            "publisher": 2,
+            "date_published": "2012-03-10",
+            "number_of_copies": 12,
+            "number_of_pages": 180,
+            "condition": "No damage",
+            "comment": null,
+            "original_weekly_rent_price": 52.0
+        }
+    }
+]
