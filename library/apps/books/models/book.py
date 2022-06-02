@@ -13,12 +13,11 @@ class Book(models.Model):
     author = models.ForeignKey('Author', on_delete=models.RESTRICT)
     genre = models.CharField(max_length=100)
     publisher = models.ForeignKey('Publisher', on_delete=models.RESTRICT)
-    year_published = models.DateField()
+    date_published = models.DateField()
     number_of_copies = models.IntegerField()
     number_of_pages = models.IntegerField()
     condition = models.CharField(max_length=50, choices=ConditionChoise.choices, default=ConditionChoise.NO_DAMAGE)
     comment = models.TextField(null=True)
-    original_pledge_price = models.FloatField()
     original_weekly_rent_price = models.FloatField()
 
     @staticmethod
@@ -28,9 +27,6 @@ class Book(models.Model):
         elif condition == ConditionChoise.SIGNIFICANT_DAMAGE:
             return price * 0.6
         return price
-
-    def get_pledge_price(self):
-        return Book._calculate_price_price(self.original_pledge_price, self.condition)
 
     def get_weekly_rent_price(self):
         return Book._calculate_price_price(self.original_weekly_rent_price, self.condition)

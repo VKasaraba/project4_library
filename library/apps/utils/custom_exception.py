@@ -2,7 +2,7 @@ class BaseLibraryException(Exception):
     def __init__(self, status_code=None, detail=None, error_type=None, extra=None, **kwargs):
 
         super().__init__(self, detail)
-        self.atidls_status_code = status_code
+        self.library_status_code = status_code
         self.extra = extra
         self.error_type = error_type
 
