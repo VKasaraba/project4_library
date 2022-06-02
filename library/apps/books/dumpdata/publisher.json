@@ -1,0 +1,22 @@
+[
+    {
+        "model": "books.publisher",
+        "pk": 1,
+        "fields": {
+            "name": "Bloomsbury",
+            "date_founded": "1986-03-01",
+            "address": "50 Bedford Square, London WC1B 3DP, United Kingdom",
+            "contact_email": "contact@bloomsbury.com"
+        }
+    },
+    {
+        "model": "books.publisher",
+        "pk": 2,
+        "fields": {
+            "name": "Signet Books",
+            "date_founded": "1948-12-05",
+            "address": "10850 East Rd Potter Valley, California(CA), USA",
+            "contact_email": "contact@signedbooks.com"
+        }
+    }
+]
