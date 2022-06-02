@@ -17,10 +17,13 @@ class User(AbstractBaseUser):
     email = models.EmailField(max_length=180, unique=True)
     date_joined = models.DateTimeField(auto_now_add=True)
     phone = models.CharField(max_length=30, null=True)
-    status = models.CharField(max_length=30, choices=StatusChoices.choices)
+    status = models.CharField(max_length=30, choices=StatusChoices.choices, null=True)
     is_admin = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
 
     objects = UserManager()
 
+    def save(self, *args, **kwargs):
+        self.set_password(self.password)
+        return super(User, self).save(*args, **kwargs)
