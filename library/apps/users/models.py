@@ -24,7 +24,3 @@ class User(AbstractBaseUser):
 
     objects = UserManager()
 
-    # def save(self, *args, **kwargs):
-    #     raw_password = self.password
-    #     self.set_password(raw_password)
-    #     return super().save(*args, **kwargs)
