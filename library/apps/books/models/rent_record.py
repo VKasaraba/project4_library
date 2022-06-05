@@ -10,7 +10,7 @@ User = get_user_model()
 class RentRecord(models.Model):
     book = models.ForeignKey('Book', on_delete=models.RESTRICT)
     user = models.ForeignKey(User, on_delete=models.RESTRICT)
-    date_created = models.DateField(auto_now_add=True)
+    date_created = models.DateField()
     weeks_number = models.IntegerField()
     opened = models.BooleanField(default=False)
     closed = models.BooleanField(default=False)
