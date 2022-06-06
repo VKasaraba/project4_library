@@ -5,6 +5,7 @@ from library.apps.books.price_manager.price_manager import PriceManager
 
 class RentRecordSerializer(serializers.ModelSerializer):
     rent_price = serializers.SerializerMethodField()
+    collateral_price = serializers.SerializerMethodField()
 
     class Meta:
         model = RentRecord
@@ -13,3 +14,6 @@ class RentRecordSerializer(serializers.ModelSerializer):
     def get_rent_price(self, obj):
         price_manager = PriceManager()
         return price_manager.calculate_rent_price(obj.book, obj.user, obj.weeks_number)
+
+    def get_collateral_price(self, obj):
+        return obj.book.get_collateral_price()

@@ -20,5 +20,5 @@ class RentRecord(models.Model):
         return self.opened and not self.closed
 
     def is_late(self):
-        return ceil((datetime.today().date() - self.date_created).days / 7)
+        return ceil((datetime.today().date() - self.date_created).days / 7 > self.weeks_number)
 

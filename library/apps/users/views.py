@@ -11,7 +11,6 @@ from rest_framework.permissions import IsAuthenticated
 
 @handle_library_exceptions
 class UserListCreateAPIView(ListCreateAPIView):
-    permission_classes = (IsAuthenticated, )
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
