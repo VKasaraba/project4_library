@@ -27,5 +27,21 @@ class PriceManager(Singleton):
     def calculate_fine(self, record):
         day_today = datetime.datetime.today().date()
         weeks_late = ceil((day_today - record.date_created).days / 7) - record.weeks_number
-        fine_price = weeks_late * record.book.get_weekly_rent_price() * (1 + 0.5 * weeks_late)
+        fine_price = weeks_late * record.book.get_weekly_rent_price() * (1 + 0.2 * weeks_late)
         return round(fine_price)
+
+    def pay_collateral_price(self, book, user):
+        user.balance -= book.get_collateral_price()
+        user.save()
+
+    def pay_rent_price(self, book, user, weeks_number):
+        user.balance -= self.calculate_rent_price(book, user, weeks_number)
+        user.save()
+
+    def return_collateral_price(self, book, user):
+        user.balance += book.get_collateral_price()
+        user.save()
+
+    def pay_fine(self, user, fine):
+        user.balance -= fine
+        user.save()
