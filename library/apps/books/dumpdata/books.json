@@ -12,7 +12,8 @@
             "number_of_pages": 420,
             "condition": "Minor damage",
             "comment": null,
-            "original_weekly_rent_price": 40.0
+            "original_weekly_rent_price": 40.0,
+            "original_collateral_price": 120.0
         }
     },
     {
@@ -28,7 +29,8 @@
             "number_of_pages": 123,
             "condition": "No damage",
             "comment": null,
-            "original_weekly_rent_price": 45.0
+            "original_weekly_rent_price": 45.0,
+            "original_collateral_price": 134.0
         }
     },
     {
@@ -44,7 +46,8 @@
             "number_of_pages": 141,
             "condition": "Significant damage",
             "comment": null,
-            "original_weekly_rent_price": 35.0
+            "original_weekly_rent_price": 35.0,
+            "original_collateral_price": 92.0
         }
     },
     {
@@ -60,7 +63,8 @@
             "number_of_pages": 390,
             "condition": "No damage",
             "comment": null,
-            "original_weekly_rent_price": 60.0
+            "original_weekly_rent_price": 60.0,
+            "original_collateral_price": 200.0
         }
     },
     {
@@ -76,7 +80,8 @@
             "number_of_pages": 410,
             "condition": "Minor damage",
             "comment": null,
-            "original_weekly_rent_price": 42.0
+            "original_weekly_rent_price": 42.0,
+            "original_collateral_price": 118.0
         }
     },
     {
@@ -92,7 +97,8 @@
             "number_of_pages": 452,
             "condition": "No damage",
             "comment": null,
-            "original_weekly_rent_price": 51.0
+            "original_weekly_rent_price": 51.0,
+            "original_collateral_price": 170.0
         }
     },
     {
@@ -108,7 +114,8 @@
             "number_of_pages": 382,
             "condition": "No damage",
             "comment": null,
-            "original_weekly_rent_price": 48.0
+            "original_weekly_rent_price": 48.0,
+            "original_collateral_price": 130.0
         }
     },
     {
@@ -124,7 +131,8 @@
             "number_of_pages": 367,
             "condition": "Significant damage",
             "comment": null,
-            "original_weekly_rent_price": 42.0
+            "original_weekly_rent_price": 42.0,
+            "original_collateral_price": 128.0
         }
     },
     {
@@ -140,7 +148,8 @@
             "number_of_pages": 246,
             "condition": "Minor damage",
             "comment": null,
-            "original_weekly_rent_price": 38.0
+            "original_weekly_rent_price": 38.0,
+            "original_collateral_price": 150.0
         }
     },
     {
@@ -156,7 +165,8 @@
             "number_of_pages": 180,
             "condition": "No damage",
             "comment": null,
-            "original_weekly_rent_price": 52.0
+            "original_weekly_rent_price": 52.0,
+            "original_collateral_price": 168.0
         }
     }
 ]
