@@ -61,7 +61,7 @@ class RentRecordRetrieveUpdateAPIView(RetrieveUpdateDestroyAPIView):
         if record.is_late():
             fine = price_manager.calculate_fine(record)
             if not paid_fine:
-                raise_library_exception(400, fine, 'fine')
+                raise_library_exception(200, fine, 'fine')
         if record.user.balance + record.book.get_collateral_price() < price_manager.calculate_rent_price(record.book, record.user, record.weeks_number):
             raise_library_exception(400, 'Not enought money on balance')
         price_manager.return_collateral_price(record.book, record.user)
